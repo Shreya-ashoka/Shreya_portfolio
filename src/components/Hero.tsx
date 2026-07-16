@@ -150,9 +150,9 @@ export default function Hero() {
           </div>
 
           {/* Orb column */}
-          <div className="intro-ring relative flex h-[46vh] w-full items-center justify-center overflow-visible lg:h-[80vh] lg:w-1/2">
+          <div className="intro-ring relative flex h-[58vh] w-full items-center justify-center overflow-visible lg:h-[90vh] lg:w-1/2">
             <div
-              className="h-[74vmin] w-[74vmin] max-h-[720px] max-w-[720px] origin-center transition-transform duration-700 ease-out [transform:rotate(-6deg)_scale(1.12)] hover:[transform:rotate(0deg)_scale(1.18)] lg:h-full lg:w-full"
+              className="h-[74vmin] w-[74vmin] max-h-[720px] max-w-[720px] origin-center transition-transform duration-700 ease-out [transform:scale(1)] hover:[transform:scale(1.05)] lg:h-[100%] lg:w-[100%]"
             >
               <PortalOrb />
             </div>
@@ -221,11 +221,11 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="home-reveal mt-16 grid w-full max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="home-reveal mt-16 flex w-full max-w-3xl flex-wrap items-center justify-center gap-4">
           {stats.map((s) => (
             <div
               key={s.label}
-              className="glass-panel rounded-2xl px-4 py-6 transition-transform duration-300 hover:-translate-y-1"
+              className="glass-panel min-w-[150px] flex-1 rounded-2xl px-4 py-6 transition-transform duration-300 hover:-translate-y-1 sm:flex-none sm:basis-[180px]"
             >
               <div className="font-display text-2xl font-bold text-gradient sm:text-3xl">{s.value}</div>
               <div className="mt-1 text-[10px] uppercase tracking-[0.15em] text-[var(--color-muted)]">
