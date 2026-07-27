@@ -140,7 +140,8 @@ function ExpandedDetails({ item }: { item: ExperienceItem }) {
       <div className="mt-7 border-t border-white/[0.08] pt-7">
         {item.techStack && <TechStackGroups techStack={item.techStack} />}
 
-        {item.projects && (
+        {/* Projects Worked On is intentionally hidden for now. */}
+        {false && item.projects && (
           <div className="mt-8">
             <SectionLabel>Projects Worked On</SectionLabel>
             <div className="mt-4 grid gap-3">
