@@ -104,7 +104,7 @@ export default function About() {
             </span>
             <div>
               <h3 className="font-display text-lg font-semibold text-white">Published Researcher</h3>
-              <p className="text-sm text-[var(--color-muted)]">Taylor &amp; Francis • IEEE</p>
+              <p className="text-sm text-[var(--color-muted)]">• Taylor &amp; Francis • IEEE</p>
             </div>
           </motion.div>
         </div>

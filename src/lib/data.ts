@@ -113,7 +113,21 @@ export type ExperienceItem = {
   company: string;
   period: string;
   current?: boolean;
+  statusLabel?: string;
   bullets?: string[];
+  keyContributions?: string[];
+  techStack?: {
+    group: string;
+    skills: string[];
+  }[];
+  projects?: {
+    title: string;
+    description: string;
+    technologies: string[];
+    subprojects?: string[];
+  }[];
+  coreResponsibilities?: string[];
+  metrics?: string[];
 };
 
 export const experience: ExperienceItem[] = [
@@ -123,6 +137,92 @@ export const experience: ExperienceItem[] = [
     company: "NeuAlto Technologies",
     period: "Jan 2026 - Present",
     current: true,
+    statusLabel: "NOW",
+    keyContributions: [
+      "Built a reusable AI Decision Intelligence Platform supporting customer acquisition, customer retention, and cross-sell recommendation use cases.",
+      "Developed Machine Learning pipelines for feature engineering, propensity scoring, CLTV prediction, customer segmentation, decile analysis, and recommendation workflows.",
+      "Designed and implemented interactive analytics dashboards using Next.js, React, TypeScript, Tailwind CSS, and Recharts.",
+      "Developed FastAPI backend services to integrate machine learning predictions with frontend dashboards through REST APIs.",
+      "Built an AI Budget Simulator featuring Budget Optimization and Scenario Simulation workflows.",
+      "Developed an ROI Calculator for estimating campaign profitability, expected revenue, and marketing ROI.",
+      "Worked with AWS, Amazon S3, Parquet storage, and Google Cloud Platform for cloud storage, deployment, and scalable AI workflows.",
+      "Collaborated across the complete full-stack architecture, from Jupyter notebooks and ML pipelines to FastAPI backend APIs, React frontend dashboards, and cloud deployment.",
+    ],
+    techStack: [
+      { group: "Programming", skills: ["Python", "TypeScript"] },
+      { group: "Machine Learning", skills: ["Scikit-learn", "Pandas", "NumPy"] },
+      { group: "Frontend", skills: ["React", "Next.js", "Tailwind CSS", "Recharts", "React Query", "Zustand"] },
+      { group: "Backend", skills: ["FastAPI", "REST APIs"] },
+      { group: "Cloud", skills: ["AWS", "Amazon S3", "Google Cloud Platform", "Docker"] },
+      { group: "Tools", skills: ["Git", "Jupyter Notebook"] },
+    ],
+    projects: [
+      {
+        title: "AI Decision Intelligence Platform",
+        description:
+          "Reusable AI platform for decisioning across growth, retention, and recommendation workflows. I built ML pipeline integrations, API-backed dashboard flows, and reusable frontend analytics modules.",
+        technologies: ["Python", "FastAPI", "React", "Next.js", "Tailwind CSS"],
+      },
+      {
+        title: "Customer Acquisition Engine",
+        description:
+          "Propensity-driven workflow for identifying high-value acquisition opportunities. I contributed feature engineering, scoring pipelines, decile analysis, and dashboard views for business review.",
+        technologies: ["Scikit-learn", "Pandas", "FastAPI", "Recharts"],
+      },
+      {
+        title: "Customer Retention Engine",
+        description:
+          "Predictive retention system for surfacing churn risk and prioritizing intervention segments. I worked on ML preprocessing, segmentation logic, REST integration, and interactive retention analytics.",
+        technologies: ["Python", "NumPy", "FastAPI", "React"],
+      },
+      {
+        title: "Cross-Sell Recommendation Engine",
+        description:
+          "Recommendation workflow for matching customers with relevant cross-sell offers. I developed recommendation pipeline pieces, model-output integration, and dashboard components for exploration.",
+        technologies: ["Scikit-learn", "Pandas", "REST APIs", "Next.js"],
+      },
+      {
+        title: "Multi-Domain Analytics Dashboard",
+        description:
+          "Unified analytics experience for comparing AI outputs across acquisition, retention, and cross-sell domains. I designed responsive dashboard sections, charts, filters, and state-driven interactions.",
+        technologies: ["React", "TypeScript", "Tailwind CSS", "Recharts", "Zustand"],
+      },
+      {
+        title: "Budget Simulator",
+        description:
+          "Simulation tool for planning spend allocation and testing campaign scenarios before execution. I built the Budget Optimization and Scenario Simulation workflows across UI, API, and model integration layers.",
+        technologies: ["Next.js", "FastAPI", "Python", "React Query"],
+        subprojects: ["Budget Optimization Workflow", "Scenario Simulation Workflow"],
+      },
+      {
+        title: "ROI Calculator",
+        description:
+          "Campaign profitability calculator for estimating expected revenue, marketing ROI, and return scenarios. I implemented calculation flows, dashboard presentation, and backend endpoints for structured inputs.",
+        technologies: ["TypeScript", "React", "FastAPI", "REST APIs"],
+      },
+    ],
+    coreResponsibilities: [
+      "Machine Learning Model Development",
+      "Feature Engineering",
+      "Data Processing Pipelines",
+      "FastAPI Backend Development",
+      "REST API Integration",
+      "Dashboard Development",
+      "Cloud Deployment",
+      "Model Integration",
+      "Performance Optimization",
+      "Cross-functional Collaboration",
+    ],
+    metrics: [
+      "AI Decision Platform",
+      "Multi-Domain Dashboards",
+      "Budget Simulator",
+      "ROI Calculator",
+      "Full Stack AI Development",
+      "AWS & GCP Integration",
+      "Machine Learning Pipelines",
+      "Production Deployment",
+    ],
   },
   {
     id: "praxiti",
