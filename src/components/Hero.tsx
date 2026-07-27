@@ -14,8 +14,8 @@ const PortalOrb = dynamic(() => import("@/components/canvas/PortalOrb"), { ssr: 
 const stats = [
   { value: "2", label: "Publications" },
   { value: "4+", label: "AI Projects" },
-  { value: "93.8%", label: "Best Accuracy" },
-  { value: "9.39", label: "CGPA / 10" },
+  { value: "9.39", label: "CGPA" },
+
 ];
 
 const heroTags = ["AI ENGINEER", "FULL-STACK DEVELOPMENT", "RESEARCHER"];
@@ -170,11 +170,6 @@ export default function Hero() {
 
       {/* Home content */}
       <section id="home" className="relative mx-auto flex max-w-5xl flex-col items-center px-6 pb-32 pt-40 text-center">
-        <span className="home-reveal eyebrow mb-6 rounded-full border border-[var(--color-border)] px-4 py-1.5 text-[10px]">
-          <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 align-middle shadow-[0_0_8px_2px_rgba(52,211,153,0.8)]" />
-          AVAILABLE FOR AI/ML ROLES — BENGALURU
-        </span>
-
         <h2 className="home-reveal font-display text-5xl font-bold leading-[1.05] text-white sm:text-6xl md:text-7xl">
           Building
           <br />
