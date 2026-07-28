@@ -11,8 +11,8 @@ export default function About() {
       <SectionHeading
         index="01"
         label="ABOUT"
-        title="Inside the Lab"
-        subtitle="Where research meets production. A glimpse into who I am and what drives my work."
+        title="About"
+        subtitle="I work across machine learning, backend systems, and product interfaces."
       />
 
       <div className="grid gap-6 md:grid-cols-2">
@@ -21,10 +21,10 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="glass-panel rounded-3xl p-8"
+          className="glass-panel rounded-xl p-8"
         >
           <div className="mb-6 flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-cyan)]/20 to-[var(--color-violet)]/20 text-[var(--color-cyan-soft)]">
+            <span className="flex h-10 w-10 items-center justify-center rounded-md bg-[var(--color-surface-2)] text-[var(--color-cyan-soft)]">
               <BrainCircuit size={18} />
             </span>
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-muted)]">
@@ -34,10 +34,10 @@ export default function About() {
           <div className="space-y-4 text-[15px] leading-relaxed text-[var(--color-text)]/90">
             <p>
               I&apos;m an <span className="text-[var(--color-cyan-soft)]">AI and Machine Learning engineer</span>{" "}
-              building intelligent systems that solve real-world problems. As a{" "}
-              <span className="text-[var(--color-violet)]">published researcher at Taylor &amp; Francis and IEEE</span>
-              , I&apos;ve contributed to advancing AI for judicial systems and automated evaluation — blending deep
-              learning, LLMs, and elegant engineering.
+              focused on practical systems: model pipelines, APIs, dashboards, and research-backed product work. My
+              papers with{" "}
+              <span className="text-[var(--color-violet)]">Taylor &amp; Francis and IEEE</span> cover automated
+              evaluation and legal AI.
             </p>
             <p className="text-[var(--color-muted)]">{about.paragraphs[1]}</p>
           </div>
@@ -49,7 +49,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="glass-panel relative overflow-hidden rounded-3xl p-6"
+            className="glass-panel relative overflow-hidden rounded-xl p-6"
           >
             <div className="mb-3 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-400">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_2px_rgba(52,211,153,0.7)]" />
@@ -74,7 +74,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="glass-panel rounded-3xl p-6"
+            className="glass-panel rounded-xl p-6"
           >
             <div className="mb-3 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--color-cyan-soft)]">
               <GraduationCap size={13} />
@@ -97,9 +97,9 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="glass-panel flex items-center gap-4 rounded-3xl p-6"
+            className="glass-panel flex items-center gap-4 rounded-xl p-6"
           >
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--color-cyan)] to-[var(--color-violet)] text-[#04050a]">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-[var(--color-surface-2)] text-[var(--color-cyan-soft)]">
               <Award size={20} />
             </span>
             <div>

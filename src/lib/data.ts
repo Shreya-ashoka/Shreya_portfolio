@@ -1,5 +1,4 @@
-// All real content sourced from https://v0-shreya-ashoka.vercel.app/
-// No placeholder content — every string below is production copy.
+// Portfolio content for Shreya Ashoka.
 
 export const profile = {
   name: "Shreya Ashoka",
@@ -7,7 +6,7 @@ export const profile = {
   tagline: "AI/ML Engineer • Full-Stack Developer • Published Author (Taylor & Francis, IEEE)",
   eyebrow: "Hii, I'm Shreya Ashoka",
   intro:
-    "Building intelligent systems using Python, LLMs, and deep learning. Turning complex problems into elegant AI solutions with modern web technologies.",
+    "Building machine learning workflows, APIs, and dashboards with Python, LLMs, and modern web tools.",
   resumeUrl: "/resume.pdf",
   email: "shreyaashoka234@gmail.com",
   phone: "+91 6361157415",
@@ -27,8 +26,8 @@ export const nav = [
 
 export const about = {
   paragraphs: [
-    "I'm an AI and Machine Learning engineer with hands-on experience building intelligent systems. As a published researcher at Taylor & Francis, I've contributed to advancing AI techniques for real-world problem solving.",
-    "I specialize in developing AI solutions with Python, LLMs, and deep learning technologies. I'm passionate about creating intelligent systems that solve complex real-world challenges with elegant, scalable solutions.",
+    "I'm an AI and Machine Learning engineer with hands-on experience across model development, backend APIs, and product dashboards.",
+    "I like working on systems that make model outputs usable: clear data flows, dependable APIs, and interfaces people can actually act on.",
   ],
   currentRole: {
     label: "Current Role",
@@ -44,7 +43,7 @@ export const about = {
   highlights: [
     {
       title: "AI/ML Expertise",
-      body: "Building intelligent systems using Python, LLMs, deep learning, and NLP techniques.",
+      body: "Working with Python, LLMs, deep learning, and NLP to build applied AI systems.",
     },
     {
       title: "Research Publications",
@@ -351,5 +350,5 @@ export const certifications: Certification[] = [
 
 export const contact = {
   heading: "Get In Touch",
-  body: "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hello, feel free to reach out!",
+  body: "For roles, collaborations, or research conversations, you can reach me here.",
 };

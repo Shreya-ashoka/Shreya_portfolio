@@ -46,14 +46,13 @@ export default function Navbar() {
       }`}
     >
       <nav
-        className={`flex w-full max-w-6xl items-center justify-between gap-4 rounded-2xl px-4 py-2.5 transition-all duration-500 ${
+        className={`flex w-full max-w-6xl items-center justify-between gap-4 rounded-xl px-4 py-2.5 transition-all duration-500 ${
           scrolled ? "glass-panel shadow-[0_8px_40px_-12px_rgba(0,0,0,0.6)]" : "glass-panel"
         }`}
       >
         <a href="#home" className="flex items-center gap-2.5 shrink-0">
-          <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-cyan)] to-[var(--color-violet)] text-xs font-bold text-[#04050a] font-display">
+          <span className="relative flex h-8 w-8 items-center justify-center rounded-md bg-[var(--color-surface-2)] text-xs font-bold text-[var(--color-cyan-soft)] font-display">
             {profile.initials}
-            <span className="absolute inset-0 -z-10 rounded-full blur-md bg-[var(--color-cyan)] opacity-60" />
           </span>
           <span className="hidden text-sm font-medium tracking-wide text-[var(--color-muted)] sm:inline">
             SHREYA
@@ -107,7 +106,7 @@ export default function Navbar() {
             href={profile.resumeUrl}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[var(--color-cyan)] to-[var(--color-violet)] px-3.5 py-1.5 text-xs font-semibold text-[#04050a] transition-transform hover:scale-105"
+            className="flex items-center gap-1.5 rounded-md bg-white px-3.5 py-1.5 text-xs font-semibold text-[#04050a] transition-transform hover:scale-[1.02]"
           >
             <FileText size={13} />
             <span className="hidden sm:inline">Resume</span>

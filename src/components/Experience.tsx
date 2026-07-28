@@ -191,7 +191,7 @@ function ExperienceCard({ item }: { item: ExperienceItem }) {
   const hasDetails = Boolean(item.projects || item.coreResponsibilities || item.metrics);
 
   return (
-    <div className="glass-panel rounded-2xl p-6 sm:p-7">
+    <div className="glass-panel rounded-xl p-6 sm:p-7">
       {item.current && (
         <div className="mb-2 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-400">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_2px_rgba(52,211,153,0.7)]" />
@@ -222,7 +222,7 @@ function ExperienceCard({ item }: { item: ExperienceItem }) {
             aria-expanded={isExpanded}
             aria-controls={`${item.id}-details`}
             onClick={() => setIsExpanded((expanded) => !expanded)}
-            className="mt-7 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.035] px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-cyan-soft)] transition duration-300 hover:-translate-y-0.5 hover:border-[var(--color-cyan)]/35 hover:bg-white/[0.055] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-cyan)]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]"
+            className="mt-7 inline-flex items-center gap-2 rounded-md border border-white/[0.08] bg-white/[0.035] px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-cyan-soft)] transition duration-300 hover:-translate-y-0.5 hover:border-[var(--color-cyan)]/35 hover:bg-white/[0.055] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-cyan)]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]"
           >
             {isExpanded ? "Hide Details" : "View Details"}
             <ChevronDown
@@ -244,8 +244,8 @@ export default function Experience() {
       <SectionHeading
         index="04"
         label="EXPERIENCE"
-        title="The Pathway"
-        subtitle="A glowing timeline of stops on my journey."
+        title="Experience"
+        subtitle="Roles where I have shipped backend services, ML workflows, and user-facing dashboards."
       />
 
       <div className="relative pl-8 sm:pl-10">

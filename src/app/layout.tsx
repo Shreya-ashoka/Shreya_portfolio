@@ -5,14 +5,14 @@ import CursorGlow from "@/components/CursorGlow";
 import StarfieldBackdrop from "@/components/canvas/StarfieldBackdrop";
 
 export const metadata: Metadata = {
-  title: "Shreya Ashoka — AI/ML Engineer & Full-Stack Developer",
+  title: "Shreya Ashoka / AI/ML Engineer & Full-Stack Developer",
   description:
-    "Portfolio of Shreya Ashoka, an AI/ML engineer with expertise in Python, LLMs, deep learning, and full-stack development. Published researcher (Taylor & Francis, IEEE).",
+    "Portfolio of Shreya Ashoka, an AI/ML engineer working across Python, LLMs, deep learning, APIs, and full-stack development.",
   metadataBase: new URL("https://shreya-ashoka.dev"),
   openGraph: {
-    title: "Shreya Ashoka — AI/ML Engineer & Full-Stack Developer",
+    title: "Shreya Ashoka / AI/ML Engineer & Full-Stack Developer",
     description:
-      "Building intelligent systems using Python, LLMs, and deep learning. Turning complex problems into elegant AI solutions.",
+      "Portfolio of Shreya Ashoka, focused on ML workflows, APIs, dashboards, and applied AI research.",
     type: "website",
   },
 };

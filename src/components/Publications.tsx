@@ -11,8 +11,8 @@ export default function Publications() {
       <SectionHeading
         index="05"
         label="PUBLICATIONS"
-        title="The Digital Library"
-        subtitle="Peer-reviewed research published in international journals and conferences."
+        title="Research"
+        subtitle="Peer-reviewed publications on automated evaluation systems and AI-assisted legal support."
       />
 
       <div className="grid gap-6 md:grid-cols-2">
@@ -23,7 +23,7 @@ export default function Publications() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="glass-panel relative flex flex-col rounded-3xl p-8"
+            className="glass-panel relative flex flex-col rounded-xl p-8"
           >
             <div className="mb-5 flex items-center justify-between">
               <span className="flex items-center gap-2 rounded-full border border-[var(--color-border)] px-3 py-1.5 text-[11px] font-medium text-[var(--color-cyan-soft)]">
@@ -75,7 +75,7 @@ export default function Publications() {
                 href={pub.paper.href}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-[#04050a] transition-transform hover:scale-105"
+                className="flex items-center gap-2 rounded-md bg-white px-4 py-2 text-xs font-semibold text-[#04050a] transition-transform hover:scale-[1.02]"
               >
                 View Paper <ExternalLink size={12} />
               </a>
