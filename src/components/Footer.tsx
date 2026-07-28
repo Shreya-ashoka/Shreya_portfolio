@@ -10,7 +10,7 @@ export default function Footer() {
       <h3 className="font-display text-2xl font-bold text-gradient">{profile.name}</h3>
       <p className="eyebrow text-[10px]">Building Intelligent Systems</p>
       <p className="mt-4 text-xs text-[var(--color-muted-2)]">
-        © {new Date().getFullYear()} — Crafted with intent.
+        &copy; {new Date().getFullYear()} {profile.name}. All rights reserved.
       </p>
     </footer>
   );
