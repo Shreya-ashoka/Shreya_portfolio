@@ -14,8 +14,6 @@ const PortalOrb = dynamic(() => import("@/components/canvas/PortalOrb"), { ssr: 
 const stats = [
   { value: "2", label: "Publications" },
   { value: "4+", label: "AI Projects" },
-  { value: "9.39", label: "CGPA" },
-
 ];
 
 const heroTags = ["AI ENGINEER", "FULL-STACK DEVELOPMENT", "RESEARCHER"];
@@ -36,8 +34,8 @@ export default function Hero() {
       )
         .fromTo(
           ".intro-ring",
-          { opacity: 0, scale: 0.6 },
-          { opacity: 1, scale: 1, duration: 1.2, ease: "power2.out" },
+          { opacity: 0 },
+          { opacity: 1, duration: 1.2, ease: "power2.out" },
           "-=0.3"
         )
         .fromTo(
@@ -67,7 +65,6 @@ export default function Hero() {
         ease: "sine.inOut",
       });
 
-      // Home section reveal
       gsap.fromTo(
         ".home-reveal",
         { opacity: 0, y: 28 },
@@ -95,74 +92,68 @@ export default function Hero() {
       {/* Splash / Portal intro */}
       <section
         id="intro"
-        className="relative flex h-[100svh] min-h-[680px] w-full items-center overflow-hidden px-6 lg:px-16"
+        className="relative flex h-[100svh] min-h-[680px] w-full flex-col items-center justify-center overflow-hidden px-6 text-center"
       >
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
-          {/* Text column */}
-          <div className="relative z-10 flex flex-col items-center text-center lg:max-w-lg lg:items-start lg:text-left">
-            <span className="intro-eyebrow eyebrow mb-6">Welcome to my portfolio!</span>
+        <div className="intro-ring pointer-events-none absolute inset-0 flex items-center justify-center">
+          <div className="h-[100vmin] w-[100vmin] max-h-[1120px] max-w-[1120px]">
+            <PortalOrb />
+          </div>
+        </div>
 
-            <h1
-              ref={nameRef}
-              className="font-display select-none text-[13vw] font-bold leading-[1.05] text-white sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl"
-              style={{ perspective: 600 }}
-            >
-              <span className="block overflow-hidden">
-                {"Hello, I am".split("").map((c, i) => (
-                  <span key={`l1-${i}`} className="char inline-block" style={{ display: "inline-block" }}>
-                    {c === " " ? "\u00A0" : c}
-                  </span>
-                ))}
-              </span>
-              <span className="block whitespace-nowrap text-[10vw] sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-                {fullName.split("").map((c, i) => (
-                  <span
-                    key={`n-${i}`}
-                    className="char text-gradient inline-block"
-                    style={{ display: "inline-block" }}
-                  >
-                    {c === " " ? "\u00A0" : c}
-                  </span>
-                ))}
-              </span>
-            </h1>
+        <div className="relative z-10 flex flex-col items-center">
+          <span className="intro-eyebrow eyebrow mb-6">Welcome to my portfolio!</span>
 
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5 lg:justify-start">
-              {heroTags.map((tag) => (
-                <span
-                  key={tag}
-                  className="intro-tag rounded-full border border-[var(--color-cyan)]/30 bg-[#0a2a30]/50 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.15em] text-[var(--color-cyan-soft)] backdrop-blur-sm sm:text-[11px]"
-                >
-                  {tag}
+          <h1
+            ref={nameRef}
+            className="font-display select-none text-[15vw] font-bold leading-[1.05] text-white sm:text-7xl md:text-8xl"
+            style={{ perspective: 600 }}
+          >
+            <span className="block overflow-hidden">
+              {"Hello, I am".split("").map((c, i) => (
+                <span key={`l1-${i}`} className="char inline-block" style={{ display: "inline-block" }}>
+                  {c === " " ? "\u00A0" : c}
                 </span>
               ))}
-            </div>
+            </span>
+            <span className="block whitespace-nowrap text-[14vw] sm:text-7xl md:text-8xl">
+              {fullName.split("").map((c, i) => (
+                <span
+                  key={`n-${i}`}
+                  className="char text-gradient inline-block"
+                  style={{ display: "inline-block" }}
+                >
+                  {c === " " ? "\u00A0" : c}
+                </span>
+              ))}
+            </span>
+          </h1>
 
-            <div className="intro-cta mt-10">
-              <a
-                href="#home"
-                className="intro-cta-inner group flex items-center gap-2 rounded-full border border-[var(--color-cyan)]/40 bg-[#0a2a30]/70 px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-cyan-soft)] backdrop-blur-md transition-transform hover:scale-105"
+          <div className="intro-tags mt-6 flex flex-wrap items-center justify-center gap-2.5">
+            {heroTags.map((tag) => (
+              <span
+                key={tag}
+                className="intro-tag rounded-full border border-[var(--color-cyan)]/30 bg-[#0a2a30]/50 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-[var(--color-cyan-soft)] backdrop-blur-sm sm:text-xs"
               >
-                Enter the Portal
-                <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-              </a>
-            </div>
+                {tag}
+              </span>
+            ))}
           </div>
 
-          {/* Orb column */}
-          <div className="intro-ring relative flex h-[58vh] w-full items-center justify-center overflow-visible lg:h-[90vh] lg:w-1/2">
-            <div
-              className="h-[74vmin] w-[74vmin] max-h-[720px] max-w-[720px] origin-center transition-transform duration-700 ease-out [transform:scale(1)] hover:[transform:scale(1.05)] lg:h-[100%] lg:w-[100%]"
+          <div className="intro-cta mt-10">
+            <a
+              href="#home"
+              className="intro-cta-inner group flex items-center gap-2 rounded-full border border-[var(--color-cyan)]/40 bg-[#0a2a30]/70 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-cyan-soft)] backdrop-blur-md transition-transform hover:scale-105"
             >
-              <PortalOrb />
-            </div>
+              Enter the Portal
+              <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
         </div>
 
         <a
           href="#home"
           aria-label="Scroll down"
-          className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-[var(--color-muted)] transition-colors hover:text-[var(--color-cyan-soft)]"
+          className="absolute bottom-8 z-10 text-[var(--color-muted)] transition-colors hover:text-[var(--color-cyan-soft)]"
         >
           <ChevronDown className="animate-bounce" size={22} />
         </a>
@@ -170,6 +161,11 @@ export default function Hero() {
 
       {/* Home content */}
       <section id="home" className="relative mx-auto flex max-w-5xl flex-col items-center px-6 pb-32 pt-40 text-center">
+        <span className="home-reveal eyebrow mb-6 rounded-full border border-[var(--color-border)] px-4 py-1.5 text-[10px]">
+          <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 align-middle shadow-[0_0_8px_2px_rgba(52,211,153,0.8)]" />
+          AVAILABLE FOR AI/ML ROLES — BENGALURU
+        </span>
+
         <h2 className="home-reveal font-display text-5xl font-bold leading-[1.05] text-white sm:text-6xl md:text-7xl">
           Building
           <br />
@@ -216,11 +212,11 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="home-reveal mt-16 flex w-full max-w-3xl flex-wrap items-center justify-center gap-4">
+        <div className="home-reveal mx-auto mt-16 grid w-full max-w-xs grid-cols-2 gap-3">
           {stats.map((s) => (
             <div
               key={s.label}
-              className="glass-panel min-w-[150px] flex-1 rounded-2xl px-4 py-6 transition-transform duration-300 hover:-translate-y-1 sm:flex-none sm:basis-[180px]"
+              className="glass-panel rounded-2xl px-4 py-6 transition-transform duration-300 hover:-translate-y-1"
             >
               <div className="font-display text-2xl font-bold text-gradient sm:text-3xl">{s.value}</div>
               <div className="mt-1 text-[10px] uppercase tracking-[0.15em] text-[var(--color-muted)]">

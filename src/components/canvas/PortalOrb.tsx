@@ -33,27 +33,12 @@ function WireLayer({
   );
 }
 
-function GlowCore() {
-  const ref = useRef<THREE.Mesh>(null);
-  useFrame((state) => {
-    if (!ref.current) return;
-    const s = 1 + Math.sin(state.clock.elapsedTime * 1.2) * 0.04;
-    ref.current.scale.setScalar(s);
-  });
-  return (
-    <mesh ref={ref}>
-      <sphereGeometry args={[1.15, 48, 48]} />
-      <meshBasicMaterial color="#5ce6ff" transparent opacity={0.9} />
-    </mesh>
-  );
-}
-
 function Satellite() {
   const ref = useRef<THREE.Group>(null);
   useFrame((state) => {
     if (!ref.current) return;
     const t = state.clock.elapsedTime * 0.4;
-    ref.current.position.set(Math.cos(t) * 3.6, Math.sin(t * 0.6) * 1.6, Math.sin(t) * 3.6);
+    ref.current.position.set(Math.cos(t) * 4.25, Math.sin(t * 0.6) * 1.95, Math.sin(t) * 4.25);
   });
   return (
     <group ref={ref}>
@@ -68,12 +53,11 @@ function Satellite() {
 
 export default function PortalOrb() {
   return (
-    <Canvas camera={{ position: [0, 0, 7], fov: 50 }} dpr={[1, 1.5]} gl={{ alpha: true, antialias: true }}>
+    <Canvas camera={{ position: [0, 0, 7.5], fov: 50 }} dpr={[1, 1.5]} gl={{ alpha: true, antialias: true }}>
       <ambientLight intensity={0.6} />
-      <GlowCore />
-      <WireLayer radius={2.2} color="#4ecbf0" speed={0.12} detail={1} />
-      <WireLayer radius={1.7} color="#8b6bf2" speed={-0.18} detail={0} rotationOffset={1.4} />
-      <WireLayer radius={2.6} color="#3fae9c" speed={0.07} detail={2} rotationOffset={2.4} />
+      <WireLayer radius={2.75} color="#4ecbf0" speed={0.12} detail={1} />
+      <WireLayer radius={2.1} color="#8b6bf2" speed={-0.18} detail={0} rotationOffset={1.4} />
+      <WireLayer radius={3.25} color="#3fae9c" speed={0.07} detail={2} rotationOffset={2.4} />
       <Satellite />
     </Canvas>
   );

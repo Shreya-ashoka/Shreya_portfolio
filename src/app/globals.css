@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg: #04050a;
-  --color-bg-elevated: #090c15;
-  --color-surface: #0d111c;
-  --color-surface-2: #121729;
-  --color-border: rgba(148, 163, 199, 0.14);
-  --color-text: #eef1f8;
-  --color-muted: #8892a6;
-  --color-muted-2: #5c667c;
-  --color-cyan: #4ecbf0;
-  --color-cyan-soft: #7fe0ff;
-  --color-violet: #8b6bf2;
-  --color-magenta: #e264c4;
+  --color-bg: #08090b;
+  --color-bg-elevated: #101216;
+  --color-surface: #15181d;
+  --color-surface-2: #1b2027;
+  --color-border: rgba(180, 188, 201, 0.16);
+  --color-text: #f3f4f1;
+  --color-muted: #a0a7ad;
+  --color-muted-2: #6f777f;
+  --color-cyan: #6fd3c5;
+  --color-cyan-soft: #a8e6dc;
+  --color-violet: #d9a441;
+  --color-magenta: #ef7d6a;
   --font-display: "Space Grotesk", "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -47,7 +47,7 @@ body {
 }
 
 ::selection {
-  background: rgba(78, 203, 240, 0.28);
+  background: rgba(111, 211, 197, 0.28);
   color: #fff;
 }
 
@@ -63,28 +63,28 @@ body {
 }
 
 .glass-panel {
-  background: linear-gradient(180deg, rgba(18, 23, 41, 0.55), rgba(9, 12, 21, 0.55));
+  background: linear-gradient(180deg, rgba(21, 24, 29, 0.78), rgba(12, 14, 17, 0.82));
   border: 1px solid var(--color-border);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .text-gradient {
-  background: linear-gradient(100deg, #ffffff 10%, var(--color-cyan-soft) 45%, var(--color-violet) 80%);
+  background: linear-gradient(100deg, #ffffff 10%, var(--color-cyan-soft) 48%, var(--color-violet) 92%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .glow-cyan {
-  box-shadow: 0 0 0 1px rgba(78, 203, 240, 0.25), 0 0 40px -8px rgba(78, 203, 240, 0.55);
+  box-shadow: 0 0 0 1px rgba(111, 211, 197, 0.22), 0 18px 48px -34px rgba(111, 211, 197, 0.6);
 }
 
 .eyebrow {
-  letter-spacing: 0.32em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-size: 0.9rem;
-  color: var(--color-white-soft);
+  font-size: 0.78rem;
+  color: var(--color-muted);
 }
 
 .section-heading-number {
