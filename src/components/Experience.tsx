@@ -145,7 +145,7 @@ function ExpandedDetails({ item }: { item: ExperienceItem }) {
           <div className="mt-8">
             <SectionLabel>Projects Worked On</SectionLabel>
             <div className="mt-4 grid gap-3">
-              {item.projects.map((project) => (
+              {item.projects?.map((project) => (
                 <ProjectDetails key={project.title} project={project} />
               ))}
             </div>
